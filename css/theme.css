@@ -1,0 +1,69 @@
+/* theme.css: colors, decorative styles */
+.body-gold { color: var(--color-gold); }
+
+.cover .hero { position: relative; min-height: 80vh; display: grid; }
+.hero-img { width: 100%; height: 80vh; object-fit: cover; filter: saturate(105%) contrast(95%); }
+.overlay { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0.15) 40%, rgba(0,0,0,0)); color: #fff; }
+.brand.title { font-size: clamp(2rem, 6vw, 4rem); letter-spacing: .06em; display: inline-block; padding: .35rem .75rem; background: rgba(0,0,0,.45); border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+.subtitle { font-family: var(--font-display); font-size: var(--step-1); opacity: .98; display: inline-block; margin-top: .4rem; padding: .25rem .6rem; background: rgba(0,0,0,.35); border-radius: 999px; }
+.meta { list-style: none; margin: 1rem 0; padding: 0; font-size: var(--step-0); }
+.meta li { margin: .25rem 0; display: flex; align-items: center; justify-content: center; gap: .5rem; }
+.icon { width: 18px; height: 18px; opacity: .9; }
+.cta-row { display: flex; gap: .5rem; justify-content: center; margin-top: .75rem; }
+
+/* Magazine accents */
+.section-header { display: flex; align-items: center; gap: .5rem; }
+.icon-lg { width: 28px; height: 28px; filter: drop-shadow(0 1px 0 rgba(0,0,0,.1)); }
+.spin-slow { animation: spin 24s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* Duo section */
+.duo { background: var(--color-pastel); border-top: var(--border); border-bottom: var(--border); }
+.poem { font-family: var(--font-display); font-size: var(--step-1); text-align: center; max-width: 38ch; margin: 0 auto; }
+
+/* Profile and first step */
+.profile .grid, .first-step .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .75rem; }
+.profile figure, .first-step figure { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.profile img, .first-step img { transition: transform .3s ease, filter .3s ease; }
+.profile img:hover, .first-step img:hover { transform: scale(1.03); filter: saturate(110%); }
+.achievements { margin-top: 1rem; border-top: var(--border); padding-top: .75rem; }
+.achievements ul { columns: 1; padding-left: 1rem; }
+
+@media (max-width: 720px) {
+  .profile .grid, .first-step .grid { grid-template-columns: 1fr; }
+}
+
+/* Gallery */
+.gallery .masonry { column-count: 2; column-gap: .5rem; }
+.gallery .m-item { break-inside: avoid; display: block; margin-bottom: .5rem; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.gallery img { width: 100%; display: block; transition: transform .3s ease; }
+.gallery .m-item:hover img { transform: scale(1.02); }
+
+@media (max-width: 720px) {
+  .gallery .masonry { column-count: 1; }
+}
+@media (min-width: 900px) {
+  .gallery .masonry { column-count: 3; }
+}
+
+/* Wishes */
+.wishes .field { margin-bottom: .75rem; }
+.wishes label { display: block; font-weight: 600; margin-bottom: .25rem; }
+.wishes input, .wishes textarea { width: 100%; border: 1px solid #ccc; border-radius: 10px; padding: .6rem .7rem; background: #fff; }
+.form-actions { display: flex; align-items: center; gap: .75rem; margin-top: .25rem; }
+.status { color: var(--color-muted); font-size: .9rem; }
+.wishes-list { margin-top: 1rem; display: grid; gap: .5rem; }
+.wishes-card { border: var(--border); border-radius: var(--radius); padding: .75rem; background: #fff; box-shadow: var(--shadow); }
+.wishes-card .meta { color: var(--color-muted); font-size: .85rem; }
+
+/* Closing */
+.closing { background: #0b0b0b; color: #fff; position: relative; overflow: clip; }
+.closing-quote { font-size: var(--step-2); }
+.recap { color: #ddd; }
+.stars::before, .stars::after { content: ""; position: absolute; inset: -10% -10% auto -10%; height: 60%; background: radial-gradient(circle, rgba(255,255,255,.7) 0 1px, transparent 1px) repeat; background-size: 20px 20px; opacity: .2; animation: drift 40s linear infinite; }
+.stars::after { inset: auto -10% -10% -10%; height: 70%; opacity: .15; animation-duration: 60s; }
+@keyframes drift { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in-view { opacity: 1; transform: none; }

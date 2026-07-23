@@ -1,0 +1,18 @@
+/* sections.css: per-section layout tweaks and animations */
+/* Cover specific */
+.cover .meta { backdrop-filter: blur(2px); }
+
+/* Lightbox */
+.lightbox[hidden] { display: none; }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: grid; place-items: center; padding: 1rem; z-index: 1000; }
+.lightbox img { max-width: 90vw; max-height: 70vh; border-radius: var(--radius); box-shadow: var(--shadow); }
+.lightbox-close { position: absolute; top: 10px; right: 10px; font-size: 2rem; line-height: 1; background: transparent; color: #fff; border: none; cursor: pointer; }
+#lightbox-caption { color: #fff; margin-top: .5rem; text-align: center; }
+
+/* Navigation open on mobile */
+.nav-open #nav-list { display: block; position: absolute; top: 56px; left: 0; right: 0; background: #fff; border-bottom: var(--border); box-shadow: var(--shadow); padding: .5rem 1rem 1rem; }
+
+/* Gentle photo grain overlay (optional aesthetic) */
+figure::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s ease; }
+figure:hover::after { opacity: .06; }
+figure { position: relative; }
