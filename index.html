@@ -33,8 +33,8 @@
         <li><a href="#closing">Соңғы бет</a></li>
       </ul>
       <div class="actions">
-        <button id="shareBtn" class="btn share">Бөлісу</button>
-        <button id="musicToggle" class="btn music" aria-pressed="false" aria-controls="bg-music">♪ Музыка</button>
+        <!-- <button id="shareBtn" class="btn share">Бөлісу</button> -->
+        <!-- <button id="musicToggle" class="btn music" aria-pressed="false" aria-controls="bg-music">♪ Музыка</button> -->
       </div>
     </nav>
   </header>
@@ -203,6 +203,45 @@
     <section id="wishes" class="section wishes reveal" aria-label="Құттықтаулар">
       <div class="container">
         <h2 class="h-style">ҚҰТТЫҚТАУЛАР</h2>
+
+        <!-- Prelude wishes (static) -->
+        <div class="wishes-prelude wishes-list" aria-label="Алдын ала құттықтаулар">
+          <article class="wishes-card">
+            <header class="card-head">
+              <h4>Ғибрат ағасының атынан</h4>
+            </header>
+            <p>Қымбатты Аяжан мен Жантөре! Сіздерге жарқын болашақ, мықты денсаулық және сарқылмас бақыт тілеймін. Армандарыңыз асқақ, мақсаттарыңыз айқын болып, әрдайым биіктерден көріне беріңіздер. Қадамдарыңызға сәттілік серік болсын!</p>
+          </article>
+
+          <article class="wishes-card">
+            <header class="card-head">
+              <h4>Төлеу апасының атынан</h4>
+            </header>
+            <p>Аяжан мен Жантөре, айналайындар! Өмірлеріңіз нұрға, шаттыққа және берекеге толы болсын. Әрбір таңда қуанышпен оянып, әрбір күндеріңіз жақсылықпен өрілсін. Алла тағала екі дүниенің бақытын нәсіп етсін!</p>
+          </article>
+
+          <article class="wishes-card">
+            <header class="card-head">
+              <h4>Тұрлан атасының атынан</h4>
+            </header>
+            <p>Қарақтарым Аяжан мен Жантөре! Өмір жолдарың әрдайым ашық, қадамдарың нық болсын. Елге сыйлы, көпке қадірлі азамат болып өсіңдер. Дендеріңе саулық, отбасыларыңа амандық, өмірлеріңе бақ-береке тілеймін. Ақ жол, айналайындар!</p>
+          </article>
+
+          <article class="wishes-card">
+            <header class="card-head">
+              <h4>Манат ағасының атынан</h4>
+            </header>
+            <p>Қымбатты Аяжан мен Жантөре! Өмір жолдарың әрдайым жарық болып, армандарың орындала берсін. Бір-біріңе әрдайым тірек болып, ата-аналарыңның қуанышы, елдің мақтанышы болып өсіңдер. Денсаулық, мол бақыт және барлық бастамаларыңа сәттілік тілеймін!</p>
+          </article>
+
+          <article class="wishes-card">
+            <header class="card-head">
+              <h4>Назым апайының атынан</h4>
+            </header>
+            <p>Аяжан мен Жантөре! Жүректеріңнен мейірім, жүздеріңнен күлкі кетпесін. Алла тағала өмірлеріңе бақ-береке, амандық пен молшылық нәсіп етсін. Армандарыңа жетіп, әрдайым қуанышқа бөленіп, биік белестерді бағындыра беріңдер. Бақыттарың баянды болсын!</p>
+          </article>
+        </div>
+
         <form id="wishForm" novalidate>
           <div class="field">
             <label for="name">Аты</label>
@@ -232,7 +271,7 @@
   </main>
 
   <footer class="site-footer">
-    <small>© <span id="year"></span> Aizhan & Zhantore • Жоба: отбасыға арналған мерекелік сайт</small>
+    <small>© <span id="year"></span> Ғалымжан Балтабеков • Ағасының атынан мерекелік сайт</small>
   </footer>
 
   <audio id="bg-music" src="assets/audio/event-theme.mp3" preload="none" loop></audio>
